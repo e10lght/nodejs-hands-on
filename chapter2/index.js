@@ -17,7 +17,7 @@ function parseJSONAsync(json, callback) {
         callback({})
     }
 }
-parseJSONAsync("不正なJSON", res => console.log("parseの結果", res));
+// parseJSONAsync("不正なJSON", res => console.log("parseの結果", res));
 
 /* 非同期的なエラーの補足(規約通り) */
 function parseJSONAsync(json, callback) {
@@ -30,7 +30,7 @@ function parseJSONAsync(json, callback) {
         }
     }, 1000)
 }
-parseJSONAsync('{"msg":"hello","to":"world"}', (err, res) => console.log("parseの結果", err, res));
+// parseJSONAsync('{"msg":"hello","to":"world"}', (err, res) => console.log("parseの結果", err, res));
 
 /**
  * コールバックをパラメータとする関数は、
@@ -42,7 +42,7 @@ function parseJSONAsyncWithCache(json, callback) {
     if (cached) {
         // callback(cached.err, cached.res)
         // setTimeout(() => callback(cached.err, cached.res))
-        process.nextTick(() => callback(cached.err, cached.res ))
+        process.nextTick(() => callback(cached.err, cached.res))
         return
     }
     parseJSONAsync(json, (err, res) => {
