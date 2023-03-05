@@ -1,0 +1,37 @@
+{
+  "name": "todo-data-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "mocha": {
+    "spec": "test/mocha/**/*.js"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/jest/**/*.js"
+    ],
+    "clearMocks": true,
+    "restoreMocks": true
+  },
+  "scripts": {
+    "test": "jest",
+    "file-system": "node app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai-http": "^4.3.0",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "jest": "^29.4.3",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.1",
+    "supertest": "^6.3.3"
+  }
+}

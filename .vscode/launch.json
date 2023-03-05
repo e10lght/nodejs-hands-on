@@ -9,7 +9,10 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/chapter4/web-app.js"
+      "program": "${workspaceFolder}/chapter7/todo-data-storage/file-system",
+      // "program": "${workspaceFolder}/node_modules/npm/lib/utils/exit-handler.js",
+      "runtimeExecutable": "npm",
+      "args": ["run", "file-system"]
     }
   ]
 }

@@ -1,0 +1,4 @@
+{
+  "extensions.closeExtensionDetailsOnViewChange": false,
+  "terminal.integrated.allowMnemonics": false
+}
